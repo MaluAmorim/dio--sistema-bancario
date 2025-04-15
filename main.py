@@ -54,7 +54,7 @@ while opcao != 4:
                         print(f"O valor máximo para saque é R${LIMITE_VALOR_SAQUE:.2f}.\n")
 
                     elif saque > saldo: # Se o valor para saque for maior do que o valor em conta o usuário terá que digitar novamente
-                        print("Saldo insuficiente!\n")
+                        print(f"Saldo insuficiente! Saldo disponível: {saldo:.2f} \n")
 
                     elif saque <= 0: # Informa que o valor tem q ser positivo fazendo o usuário digitar novamente
                         print("O valor deve ser positivo.\n")
@@ -69,6 +69,7 @@ while opcao != 4:
                     print("Entrada inválida. Por favor, digite um número válido. Não utilize vigulas mas sim ponto. Ex.: 275.49\n")
 
         elif opcao == 3: # Responsavel por mostrar o extrato da conta
+            print("==========Extrato==========")
             if valor_dos_depositos:
                 print("Depósitos realizados: \n")
 
@@ -90,6 +91,7 @@ while opcao != 4:
 
             
             print(f"O saldo atual é de R${saldo:.2f}\n") # Mostra o saldo atual
+            print("===========================")
             time.sleep(3)
 
         elif opcao == 4: # Encerra o programa
